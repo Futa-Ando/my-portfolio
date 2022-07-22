@@ -49,7 +49,7 @@ const feedbacks2 = [
   "残念！ なんとまだまだ少ないのだ💦",
   "正解！ まる。氏は170人弱の人とお話ししたことがあるのだ👍",
   "残念！ そこまで多くはないのだ💦",
-  "チミチミ、なんかの縁だからおはなししようよ",
+  "クイズにいどんだそこのあなた！ なんかの縁だからおはなししようよ♪",
   ,
 ];
 
@@ -72,3 +72,48 @@ choice6.onclick = function () {
 choice7.onclick = function () {
   choose2(3);
 };
+
+const heartButton = document.getElementById("heart-button");
+const heartCount = document.getElementById("heart-count");
+
+let count = 0;
+let response = [
+  "ありがとう！",
+  "え？！　ありがとう！！！",
+  "めっちゃうれしい♪♪♪",
+  "きみさいこ～～～(⌒∇⌒)",
+  "やっほ～い、うれしすぎるの舞(o^―^o)♪♪",
+];
+
+heartButton.onclick = function () {
+  count += 1;
+  if (count <= 4) {
+    heartCount.textContent = response[count - 1];
+  } else {
+    heartCount.textContent = response[4];
+    heartButton.textContent = "";
+  }
+};
+
+// 追従メニュー
+document.getElementById("box2").style.display = "none";
+document.getElementById("btn").style.display = "block";
+document.getElementById("btn2").style.display = "none";
+
+function clickBtn1() {
+  const p1 = document.getElementById("box2");
+  const p2 = document.getElementById("btn");
+  const p3 = document.getElementById("btn2");
+
+  if (box2.style.display == "block") {
+    // noneで非表示
+    p1.style.display = "none";
+    p2.style.display = "block";
+    p3.style.display = "none";
+  } else {
+    // blockで表示
+    p1.style.display = "block";
+    p2.style.display = "none";
+    p3.style.display = "block";
+  }
+}

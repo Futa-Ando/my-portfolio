@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>My Portfolio</title>
   </head>
   <body>
-    <header id="header">
-      <h1>ポートフォリオサイト</h1>
-    </header>
     <section id="section1">
-      <h1>安藤風太</h1>
-      <h3>Andoh Futa</h3>
+      <div class="top-container">
+        <h1>安藤風太</h1>
+        <h3>Andoh Futa</h3>
+      </div>
     </section>
     <section id="section2">
-      <h2>まる。のニックネームについて</h2>
+      <h2>ニックネーム 「まる。」</h2>
       <div class="nick-container">
         <div>
           <p>ニックネーム「まる。」の始まりはSNS</p>
@@ -36,7 +39,7 @@
           <img src="./images/maru.png" class="maru-image" />
         </div>
         <div>
-          <h4>【まる。の主要なSNSたち】</h4>
+          <h4>【Let's FOLLOW ME!!】</h4>
           <a href="https://note.com/futa990628/">
             <img src="./images/note.png" alt="note" class="sns-image" />
           </a>
@@ -57,6 +60,11 @@
             />
           </a>
         </div>
+      </div>
+      <div class="compliment">
+        <span>このまる。の写真がかわいいと思う人→→→</span>
+        <span id="heart-button">💛</span>
+        <span id="heart-count">(´；ω；`)ｳｯ…</span>
       </div>
     </section>
     <section id="section3">
@@ -98,10 +106,10 @@
           <p>カラオケ</p>
           <div id="item2">
             <h4 class="quiz-text">Q.ひとからは？</h4>
-            <button id="choice-8">～100人</button><br />
-            <button id="choice-9">101人～150人</button><br />
-            <button id="choice-10">151人～200人</button><br />
-            <button id="choice-11">201人～</button><br />
+            <button id="choice-8">年１回</button><br />
+            <button id="choice-9">半年１回</button><br />
+            <button id="choice-10">月１回</button><br />
+            <button id="choice-11">週１回</button><br />
             <div class="feedback">
               <div id="feedback5"></div>
               <div id="feedback6"></div>
@@ -116,6 +124,23 @@
     <section id="section4">
       <h2>最近のニュース</h2>
     </section>
+
+    <div class="fixed-menu">
+      <div id="box2">
+        <a href="#section1">トップへ</a><br />
+        <a href="#section2">ニックネーム</a><br />
+        <a href="#section3">趣味クイズ</a><br />
+        <a href="#section4">ニュース</a><br />
+      </div>
+      <div id="btn" class="pointer" onclick="clickBtn1();">
+        メニュー
+        <i class="fas fa-angle-double-down"></i>
+      </div>
+      <div id="btn2" class="pointer" onclick="clickBtn1();">
+        閉じる
+        <i class="fas fa-angle-double-up"></i>
+      </div>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>
