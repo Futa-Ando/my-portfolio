@@ -1,3 +1,31 @@
+// まる。画像クリック
+const maruImage = document.getElementById("maru-image");
+maruImage.src = "./images/maru1.jpg";
+
+const images = [
+  "maru1.jpg",
+  "maru2.jpg",
+  "maru3.jpg",
+  "maru4.jpg",
+  "maru5.jpg",
+  "maru6.jpg",
+  "maru7.jpg",
+  "maru8.jpg",
+];
+
+let num = 2;
+
+maruImage.onclick = function () {
+  if (num <= 7) {
+    maruImage.src = "./images/" + images[num];
+    num += 1;
+  } else {
+    num = 1;
+    maruImage.src = "./images/" + image[1];
+  }
+};
+
+// クイズ１問目
 const choice1 = document.getElementById("choice-1");
 const choice2 = document.getElementById("choice-2");
 const choice3 = document.getElementById("choice-3");
@@ -96,24 +124,17 @@ heartButton.onclick = function () {
 };
 
 // 追従メニュー
-document.getElementById("box2").style.display = "none";
-document.getElementById("btn").style.display = "block";
-document.getElementById("btn2").style.display = "none";
+const onClickButton = document.getElementById("on-click-button");
+const p1 = document.getElementById("box1");
+const p2 = document.getElementById("box2");
+p1.style.display = "block";
+p2.style.display = "none";
 
-function clickBtn1() {
-  const p1 = document.getElementById("box2");
-  const p2 = document.getElementById("btn");
-  const p3 = document.getElementById("btn2");
-
-  if (box2.style.display == "block") {
-    // noneで非表示
-    p1.style.display = "none";
-    p2.style.display = "block";
-    p3.style.display = "none";
-  } else {
-    // blockで表示
-    p1.style.display = "block";
-    p2.style.display = "none";
-    p3.style.display = "block";
-  }
-}
+onClickButton.addEventListener("mouseenter", function (event) {
+  p1.style.display = "none";
+  p2.style.display = "block";
+});
+onClickButton.addEventListener("mouseleave", function (event) {
+  p1.style.display = "block";
+  p2.style.display = "none";
+});

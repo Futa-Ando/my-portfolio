@@ -3,6 +3,10 @@ h2 {
   font-size: 50px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 #section1 {
   height: 570px;
   background-image: url(./images/top.png);
@@ -47,8 +51,10 @@ h2 {
 }
 
 .maru-image {
-  width: 320px;
-  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .sns-image {
@@ -62,7 +68,6 @@ h2 {
 .compliment {
   font-size: 30px;
   height: 145px;
-  padding-top: 50px;
 }
 
 #heart-button {
@@ -133,7 +138,24 @@ h2 {
 }
 
 #section4 {
-  height: 570px;
+}
+
+.news-item {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.news-item p {
+  font-size: 30px;
+  text-align: center;
+  width: 450px;
+}
+
+.news-item img {
+  width: 640px;
+  height: 360px;
+  object-fit: cover;
 }
 
 .fixed-menu {
@@ -152,9 +174,4 @@ h2 {
 
 #box2 a:hover {
   color: white;
-}
-
-#btn,
-#btn2 {
-  cursor: pointer;
 }
