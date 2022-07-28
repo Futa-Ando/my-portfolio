@@ -7,7 +7,7 @@ h2 {
   cursor: pointer;
 }
 
-#section1 {
+#section0 {
   height: 570px;
   background-image: url(./images/top.png);
   background-size: cover;
@@ -21,7 +21,7 @@ h2 {
   height: 165px;
   padding: 10px;
   text-align: center;
-  /* サイトから引っ張ってきたやつ */
+
   color: #fff;
   background-color: #eb6100;
   border-bottom: 5px solid #b84c00;
@@ -38,6 +38,60 @@ h2 {
 
 .top-container h3 {
   font-size: 30px;
+}
+
+#section1 {
+  background-color: antiquewhite;
+  height: 570px;
+  padding: 25px 5%;
+}
+
+@keyframes color {
+  0% {
+    background-color: rgb(252, 233, 233);
+  }
+  25% {
+    background-color: rgb(248, 195, 195);
+  }
+  50% {
+    background-color: rgb(249, 152, 152);
+  }
+  75% {
+    background-color: rgb(248, 195, 195);
+  }
+  100% {
+    background-color: rgb(252, 233, 233);
+  }
+}
+
+.intro-container {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  margin-top: 25px;
+  margin-left: 15px;
+  text-decoration: none;
+  padding: 35px;
+  line-height: 50px;
+  font-size: 30px;
+  /* 以下keyframeより */
+  animation-name: color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.intro-image1 {
+  height: 570px;
+  position: absolute;
+  top: 569px;
+  right: 0;
+}
+
+.intro-image2 {
+  height: 300px;
+  position: absolute;
+  top: 840px;
+  right: 300px;
 }
 
 #section2 {
@@ -134,7 +188,7 @@ h2 {
 #feedback6 {
   width: 210px;
   position: absolute;
-  top: 1680px;
+  top: 2430px;
 }
 
 #section4 {
@@ -158,6 +212,28 @@ h2 {
   object-fit: cover;
 }
 
+#section5 {
+  background-color: antiquewhite;
+  padding: 25px 5%;
+}
+
+.question {
+  display: inline-block;
+  background-color: rgb(244, 205, 155);
+  padding: 20px;
+  margin: 10px 20px;
+  border-radius: 20px;
+}
+
+.answer {
+  display: inline-block;
+  background-color: rgb(149, 207, 237);
+  padding: 20px;
+  margin: 10px 20px;
+  border-radius: 20px;
+}
+
+/* 追従メニュー */
 .fixed-menu {
   position: fixed;
   top: 10px;
@@ -174,4 +250,24 @@ h2 {
 
 #box2 a:hover {
   color: white;
+}
+
+/* フェードイン周り */
+.fade-in {
+  opacity: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, transform;
+}
+
+.fade-in-left {
+  transform: translate(-50px, 0);
+}
+
+.fade-in-right {
+  transform: translate(50px, 0);
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
 }
