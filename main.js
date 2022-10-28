@@ -130,7 +130,7 @@ const feedbacks3 = [
 
 const choose3 = function (choiceNumber) {
   feedback7.textContent = feedbacks3[choiceNumber].fb;
-  feedback8.src = "./images/" + feedback2[choiceNumber].image;
+  feedback8.src = "./images/" + feedbacks3[choiceNumber].image;
 };
 
 choice8.onclick = function () {
