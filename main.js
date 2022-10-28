@@ -101,6 +101,52 @@ choice7.onclick = function () {
   choose2(3);
 };
 
+// 以下３問目
+const choice8 = document.getElementById("choice-8");
+const choice9 = document.getElementById("choice-9");
+const choice10 = document.getElementById("choice-10");
+const choice11 = document.getElementById("choice-11");
+const feedback7 = document.getElementById("feedback7");
+const feedback8 = document.getElementById("feedback8");
+
+const feedbacks3 = [
+  {
+    fb: "正解！ まる。は垢をめんたいこ味と応えたのだ(笑)",
+    image: "red.jpg",
+  },
+  {
+    fb: "残念！ ちなみに後日、青はシーフード味と回答💦",
+    image: "blue.jpg",
+  },
+  {
+    fb: "残念！ ピンクって何味だっけ💦",
+    image: "pink.jpg",
+  },
+  {
+    fb: "残念！ これはサラダ味、さすがにわかった(笑)",
+    image: "green.jpg",
+  },
+];
+
+const choose3 = function (choiceNumber) {
+  feedback7.textContent = feedbacks3[choiceNumber].fb;
+  feedback6.src = "./images/" + feedback2[choiceNumber].image;
+};
+
+choice8.onclick = function () {
+  choose3(0);
+};
+choice9.onclick = function () {
+  choose3(1);
+};
+choice10.onclick = function () {
+  choose3(2);
+};
+choice11.onclick = function () {
+  choose3(3);
+};
+
+// 以下ハートボタン
 const heartButton = document.getElementById("heart-button");
 const heartCount = document.getElementById("heart-count");
 
