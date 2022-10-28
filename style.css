@@ -191,6 +191,10 @@ h2 {
   top: 2250px;
 }
 
+#feedback8 {
+  width: 210px;
+}
+
 .news-item {
   display: flex;
   justify-content: space-around;
